@@ -2,7 +2,6 @@ package main
 
 import (
 	"flag"
-	"fmt"
 	"github/ymktmk/kubernetes-api-sample/module"
 	"os"
 	"path/filepath"
@@ -14,9 +13,6 @@ import (
 func main()  {
 	
 	clientset := makeClientSet()
-	fmt.Println("------------ !!! controller run !!! --------------")
-	fmt.Println(clientset)
-	
 
 	// ここで開始
 	module.ExecController(clientset)
